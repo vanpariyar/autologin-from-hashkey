@@ -23,24 +23,24 @@ if ( !function_exists( 'add_action' ) ) {
 }
 
 /** Plugin Constants */
-if (!defined('DM_AUTOLOGIN_FROM_HASHKEY_PLUGIN_URI')) {
-	define('DM_AUTOLOGIN_FROM_HASHKEY_PLUGIN_URI', plugin_dir_url(__FILE__));
+if (!defined('AUTOLOGIN_FROM_HASHKEY_PLUGIN_URI')) {
+	define('AUTOLOGIN_FROM_HASHKEY_PLUGIN_URI', plugin_dir_url(__FILE__));
 }
 
-if (!defined('DM_AUTOLOGIN_FROM_HASHKEY_FILE_PATH')) {
-	define('DM_AUTOLOGIN_FROM_HASHKEY_FILE_PATH', plugin_dir_path(__FILE__));
+if (!defined('AUTOLOGIN_FROM_HASHKEY_FILE_PATH')) {
+	define('AUTOLOGIN_FROM_HASHKEY_FILE_PATH', plugin_dir_path(__FILE__));
 }
 
 
 /**
  * Setup Plugin
  */
-require_once (DM_AUTOLOGIN_FROM_HASHKEY_FILE_PATH . '/includes/AutologinFromHashkeySettings.php');
+require_once (AUTOLOGIN_FROM_HASHKEY_FILE_PATH . '/includes/AutologinFromHashkeySettings.php');
 
 /**
  * Shortcode Related Functions
  */
-require_once (DM_AUTOLOGIN_FROM_HASHKEY_FILE_PATH . '/includes/AutologinFromHashkeyShortcodes.php');
+require_once (AUTOLOGIN_FROM_HASHKEY_FILE_PATH . '/includes/AutologinFromHashkeyShortcodes.php');
 
 /**
  * Activation and Deavtivation Hooks
@@ -51,7 +51,7 @@ register_deactivation_hook(__FILE__, array('AutologinFromHashkeySettings','deact
 /**
  * Main Class
  */
-require_once (DM_AUTOLOGIN_FROM_HASHKEY_FILE_PATH . '/includes/AutologinFromHashKey.php');
+require_once (AUTOLOGIN_FROM_HASHKEY_FILE_PATH . '/includes/AutologinFromHashKey.php');
 
 /**
  * Kickstart Plugin
