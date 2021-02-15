@@ -68,7 +68,7 @@ class AutologinFromHashKey {
 	 * @hooked 'init'
 	 */
 	public static function addUserHashKeyEndpoint() {
-		$regexMatchParameter = '([^/]*)';
+		$regexMatchParameter = '([^/]+)';
 		add_rewrite_tag('%'.self::$queryArgument.'%', $regexMatchParameter);
 	}
 

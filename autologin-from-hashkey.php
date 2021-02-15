@@ -56,4 +56,4 @@ require_once (AUTOLOGIN_FROM_HASHKEY_FILE_PATH . '/includes/AutologinFromHashKey
 /**
  * Kickstart Plugin
  */
-DMAutologinFromHashKey::init();
+AutologinFromHashkeyShortcodes::init();

@@ -1,11 +1,7 @@
 <?php
 /**
  * Class AutologinFromHashkeyShortcodes
- */
-
-/**
- * Class DMAutologinFromHashkeyShortcodes
- *
+ * 
  * This is extra class to get the user Login link to any page.
  */
 class AutologinFromHashkeyShortcodes {
@@ -17,7 +13,7 @@ class AutologinFromHashkeyShortcodes {
         /**
          * add user id as argument in order to use Shortcode
          *
-         * @use [DM-GET-USER-HASH-LOGIN-LINK user=%{ user id here }%]
+         * @use [GET-USER-HASH-LOGIN-LINK user=%{ user id here }%]
          */
 	    add_shortcode('GET-USER-HASH-LOGIN-LINK', array( self::class, 'getUserHashLoginLink') );
     }
@@ -36,7 +32,7 @@ class AutologinFromHashkeyShortcodes {
             ), $atts, 'GET-USER-HASH-LOGIN-LINK' );
         return
             get_home_url().'?'
-            .DMAutologinFromHashKey::$queryArgument
-            .'='.DMAutologinFromHashKey::generateUserHashKeyWithTimeStamp($atts['user']);
+            .AutologinFromHashKey::$queryArgument
+            .'='.AutologinFromHashKey::generateUserHashKeyWithTimeStamp($atts['user']);
     }
 }
